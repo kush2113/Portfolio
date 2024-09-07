@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="this is the description">
+    <meta name="keywords" content="java, html, css, js, go, react, angular">
+    <meta name="author" content="ijse">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <title>Title</title>
+
+    <style>
+     body {
+           margin: 0;
+           padding: 0;
+           font-family: Arial, sans-serif;
+           overflow-x: hidden;
+       }
+
+     section {
+           position: relative;
+           text-align: center;
+           width: 100%;
+           height: 100vh;
+           overflow: hidden;
+           min-height: 500px;
+
+     }
+
+        input[type="image"] {
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: auto;
+            object-fit:cover;
+            border: none;
+            z-index: -5;
+        }
+
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            font-family: Arial, sans-serif;
+            z-index: 1;
+        }
+
+        .overlay-text h3, .overlay-text h1, .overlay-text h6 {
+            margin: 0;
+        }
+
+        .overlay-text h1 {
+            font-size: 5em;
+
+        }
+
+        .overlay-text h3 {
+            font-size: 3em;
+            transform: translate(-13%, -13%);
+        }
+
+        .overlay-text h6 {
+            font-size: 1em;
+            transform: translate(-16%, -16%);
+        }
+
+        /*header {*/
+        /*    color: #EEEEEE;*/
+        /*    background: black;*/
+        /*    height: 50px;*/
+        /*    border-radius: 70px;*/
+        /*    position: fixed;*/
+        /*    !*display: flex;*!*/
+        /*    z-index: 1000;*/
+        /*    width: 90%;*/
+        /*    top: 0;*/
+
+        /*    margin: auto;*/
+
+
+        /*}*/
+
+        header {
+            color: #EEEEEE;
+            background: black;
+            height: 50px;
+            border-radius: 90px;
+            position: sticky;
+            z-index: 1000;
+            width: 60%;
+            top: 20px;
+            margin: auto;
+
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            position: relative;
+            /*padding-right: 25px;*/
+        }
+
+        nav .div3 {
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*right: 100px;*/
+            /*left: 10px;*/
+            width: 100%;
+            display: flex;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        nav .div1 {
+            width: 100%;
+            display: flex;
+            /*justify-content: flex-end;*/
+            position: relative;
+            /*margin-right: 30px;*/
+            padding-left: 100px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .cercal {
+            background: white;
+            border-radius: 50%;
+            border: black solid 1px;
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            text-space: 30;
+            transform: translate(-50%, -50%);
+        }
+
+        .cercal>input[type="image"] {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 48.9%;
+            left: 50%;
+            text-space: 30;
+            transform: translate(-50%, -50%);
+        }
+
+        footer {
+            background: black;
+            color: #EEEEEE;
+            padding: 10px;
+            justify-content: center;
+            /*position: fixed;*/
+            align-items: center;
+            display: flex;
+            margin: auto;
+            width: 100%;
+            height: 10px;
+            bottom: 0;
+            z-index: 1000;
+
+        }
+
+        main {
+            background: darkgoldenrod;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            top: -50px;
+
+        }
+
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 35%;*/
+        /*transform: translate(-50%, -50%);*/
+        /*color: white;*/
+        /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+        /*font-family: Arial, sans-serif;*/
+        /*z-index: 1;*/
+
+
+        /*.overlay-text2 {*/
+        /*    position: absolute;*/
+        /*    top: 20%;*/
+        /*    left: 50%;*/
+        /*    transform: translate(-50%, -50%);*/
+        /*    color: black;*/
+        /*    !*background: red;*!*/
+        /*    font-family: Arial, sans-serif;*/
+        /*    z-index: 1;*/
+        /*}*/
+
+        /*.overlay-text2 h3, .overlay-text h1, .overlay-text h6 {*/
+        /*    margin: 0;*/
+        /*}*/
+
+        .overlay-text2 h1 {
+            font-size: 3em;
+            position: absolute;
+            top: 13%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            /*background: red;*/
+            font-family: Arial, sans-serif;
+            z-index: 1;
+
+        }
+
+        .overlay-text2 .text1 {
+            font-size: 2em;
+            position: absolute;
+            left: 19.3%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+            line-height: 1;
+        }
+
+        .overlay-text2 .text2 {
+            font-size: 2em;
+            position: absolute;
+            left: 25.5%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            line-height: 1;
+        }
+
+
+        .overlay-text2 h4 {
+            font-size: 1.5em;
+            color: black;
+            position: relative;
+            top: 2em;
+            font-weight: normal;
+            font-family: Calibri;
+            line-height: 1.4;
+            margin: 15.0em;
+            right: 7%;
+        }
+
+        button {
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            border: none;
+            left: 900px;
+            /*margin-top: 10px; !* Space between text and button *!*/
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 700px;
+
+        }
+
+        .main2 {
+            background: darkgoldenrod;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            min-height: 500px;
+
+        }
+
+        .overlay-text3 h1 {
+            font-size: 3em;
+            position: absolute;
+            top: -1.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+            /*background: red;*/
+            font-family: Arial, sans-serif;
+            z-index: 1;
+
+        }
+        .overlay-text3 div {
+            background: black;
+            border-radius: 40px;
+            width: 500px;
+            height: 200px;
+            top: 60%;
+            margin: 10em;
+            position: relative;
+            left: 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <input type="image" src="assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
+        <div class="overlay-text">
+            <h3>Hello, I’m</h3>
+            <h1>Kushan</h1>
+            <h6>Front-end Development | </h6>
+        </div>
+
+    </section>
+    <header>
+        <nav>
+            <div class="div3">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Education</a>
+            <a href="">Assignments</a>
+            </div>
+
+            <div class="cercal">
+                <input type="image" src="assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
+            </div>
+
+            <div class="div1">
+            <a href="">Skills</a>
+            <a href="">Projects</a>
+            <a href="">My services</a>
+            <a href="">Contact Me</a>
+            </div>
+        </nav>
+    </header>
+   <main>
+       <div class="overlay-text2">
+           <h1>About</h1>
+           <div class="text1" >I’m</div>
+           <div class="text2" >Kushan Damitha</div>
+           <h4>I am currently pursuing a Diploma in Software Engineering.
+               With a strong passion for technology and problem-solving,
+               I am eager to apply my skills and knowledge to real-world
+               projects and contribute to innovative solutions.</h4>
+       </div>
+
+       <button>Download CV</button>
+
+   </main>
+    <main class="main2">
+        <div class="overlay-text3">
+           <h1>Education</h1>
+            <div></div>
+        </div>
+    </main>
+
+   <footer>copyright © 2024 developed by Kushan | All rights reserved</footer>
+</body>
+</html>
+
+
+
