@@ -1,0 +1,133 @@
+/*.home-section {*/
+/*    position: relative;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*    height: 100vh;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*input[type="image"] {*/
+/*    position: relative;*/
+/*    top: 0;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    object-fit:cover;*/
+/*    border: none;*/
+/*    z-index: -5;*/
+/*}*/
+
+
+/*.overlay-text {*/
+/*    position: absolute;*/
+/*    top: 40%;*/
+/*    left: 35%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    color: white;*/
+/*    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
+/*    font-family: Arial, sans-serif;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.overlay-text h3, .overlay-text h1, .overlay-text h6 {*/
+/*    margin: 0;*/
+/*}*/
+
+/*.overlay-text h1 {*/
+/*    font-size: 5em;*/
+
+/*}*/
+
+/*.overlay-text h3 {*/
+/*    font-size: 3em;*/
+/*    transform: translate(-13%, -13%);*/
+/*}*/
+
+/*.overlay-text h6 {*/
+/*    font-size: 1em;*/
+/*    transform: translate(-16%, -16%);*/
+/*}*/
+
+/*.socal {*/
+/*    width: 25px;*/
+/*    height: 25px;*/
+/*    position: relative;*/
+/*    right: 165px;*/
+/*    top: -160px;*/
+/*    gap: 60%;*/
+/*    display: inline-grid;*/
+/*}*/
+
+
+
+
+.home-section {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-section>div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.kush>input[type="image"] {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: none;
+}
+
+.overlay-text h3 {
+    text-align: center;
+    color: aqua;
+    font-size: 100px;
+}
+
+.overlay-text h1 {
+
+}
+
+
+
+@media (max-height: 768px) {
+    .home-section {
+        max-height: 100vh;
+    }
+}
+
+@media (max-height: 426px) {
+    .home-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+
+    }
+
+    .home-section > div {
+        width: 100%;
+        height: auto;
+    }
+
+    input[type="image"] {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
