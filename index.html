@@ -6,314 +6,54 @@
     <meta name="keywords" content="java, html, css, js, go, react, angular">
     <meta name="author" content="ijse">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/home.css">
+    <link rel="stylesheet" href="/assets/styles/header.css">
+    <link rel="stylesheet" href="/assets/styles/footer.css">
+    <link rel="stylesheet" href="/assets/styles/about.css">
+    <link rel="stylesheet" href="/assets/styles/education.css">
+    <link rel="stylesheet" href="/assets/styles/assignment.css">
+    <link rel="stylesheet" href="/assets/styles/skills.css">
+    <link rel="stylesheet" href="/assets/styles/project.css">
+    <link rel="stylesheet" href="/assets/styles/myservices.css">
+    <link rel="stylesheet" href="/assets/styles/gallery.css">
+
+
+
+    <link href="/https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="/https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>Title</title>
 
     <style>
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
             overflow-x: hidden;
         }
-
-        section {
-            position: relative;
-            text-align: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            min-height: 500px;
-
-        }
-
-        input[type="image"] {
-            position: relative;
-            top: 0;
-            width: 100%;
-            height: auto;
-            object-fit:cover;
-            border: none;
-            z-index: -5;
-        }
-
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 35%;
-            transform: translate(-50%, -50%);
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            font-family: Arial, sans-serif;
-            z-index: 1;
-        }
-
-        .overlay-text h3, .overlay-text h1, .overlay-text h6 {
-            margin: 0;
-        }
-
-        .overlay-text h1 {
-            font-size: 5em;
-
-        }
-
-        .overlay-text h3 {
-            font-size: 3em;
-            transform: translate(-13%, -13%);
-        }
-
-        .overlay-text h6 {
-            font-size: 1em;
-            transform: translate(-16%, -16%);
-        }
-
-        /*header {*/
-        /*    color: #EEEEEE;*/
-        /*    background: black;*/
-        /*    height: 50px;*/
-        /*    border-radius: 70px;*/
-        /*    position: fixed;*/
-        /*    !*display: flex;*!*/
-        /*    z-index: 1000;*/
-        /*    width: 90%;*/
-        /*    top: 0;*/
-
-        /*    margin: auto;*/
-
-
-        /*}*/
-
-        header {
-            color: #EEEEEE;
-            background: black;
-            height: 50px;
-            border-radius: 90px;
-            position: sticky;
-            z-index: 1000;
-            width: 60%;
-            top: 20px;
-            margin: auto;
-
-        }
-
-        nav {
-            width: 100%;
-            display: flex;
-            position: relative;
-            /*padding-right: 25px;*/
-        }
-
-        nav .div3 {
-            /*display: flex;*/
-            /*align-items: center;*/
-            /*right: 100px;*/
-            /*left: 10px;*/
-            width: 100%;
-            display: flex;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        nav .div1 {
-            width: 100%;
-            display: flex;
-            /*justify-content: flex-end;*/
-            position: relative;
-            /*margin-right: 30px;*/
-            padding-left: 100px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 1em;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .cercal {
-            background: white;
-            border-radius: 50%;
-            border: black solid 1px;
-            width: 75px;
-            height: 75px;
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            text-space: 30;
-            transform: translate(-50%, -50%);
-        }
-
-        .cercal>input[type="image"] {
-            border-radius: 50%;
-            width: 70px;
-            height: 70px;
-            position: absolute;
-            top: 48.9%;
-            left: 50%;
-            text-space: 30;
-            transform: translate(-50%, -50%);
-        }
-
-        footer {
-            background: black;
-            color: #EEEEEE;
-            padding: 10px;
-            justify-content: center;
-            /*position: fixed;*/
-            align-items: center;
-            display: flex;
-            margin: auto;
-            width: 100%;
-            height: 10px;
-            bottom: 0;
-            z-index: 1000;
-
-        }
-
-        main {
-            background: darkgoldenrod;
-            position: relative;
-            text-align: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            top: -50px;
-
-        }
-
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*left: 35%;*/
-        /*transform: translate(-50%, -50%);*/
-        /*color: white;*/
-        /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
-        /*font-family: Arial, sans-serif;*/
-        /*z-index: 1;*/
-
-
-        /*.overlay-text2 {*/
-        /*    position: absolute;*/
-        /*    top: 20%;*/
-        /*    left: 50%;*/
-        /*    transform: translate(-50%, -50%);*/
-        /*    color: black;*/
-        /*    !*background: red;*!*/
-        /*    font-family: Arial, sans-serif;*/
-        /*    z-index: 1;*/
-        /*}*/
-
-        /*.overlay-text2 h3, .overlay-text h1, .overlay-text h6 {*/
-        /*    margin: 0;*/
-        /*}*/
-
-        .overlay-text2 h1 {
-            font-size: 3em;
-            position: absolute;
-            top: 13%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: black;
-            /*background: red;*/
-            font-family: Arial, sans-serif;
-            z-index: 1;
-
-        }
-
-        .overlay-text2 .text1 {
-            font-size: 2em;
-            position: absolute;
-            left: 19.3%;
-            top: 35%;
-            transform: translate(-50%, -50%);
-            line-height: 1;
-        }
-
-        .overlay-text2 .text2 {
-            font-size: 2em;
-            position: absolute;
-            left: 25.5%;
-            top: 40%;
-            transform: translate(-50%, -50%);
-            line-height: 1;
-        }
-
-
-        .overlay-text2 h4 {
-            font-size: 1.5em;
-            color: black;
-            position: relative;
-            top: 2em;
-            font-weight: normal;
-            font-family: Calibri;
-            line-height: 1.4;
-            margin: 15.0em;
-            right: 7%;
-        }
-
-        button {
-            border-radius: 30px;
-            background-color: black;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1em;
-            border: none;
-            left: 900px;
-            /*margin-top: 10px; !* Space between text and button *!*/
-            transition: background-color 0.3s ease;
-            position: absolute;
-            top: 700px;
-
-        }
-
-        .main2 {
-            background: darkgoldenrod;
-            position: relative;
-            text-align: center;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            min-height: 500px;
-
-        }
-
-        .overlay-text3 h1 {
-            font-size: 3em;
-            position: absolute;
-            top: -1.5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: black;
-            /*background: red;*/
-            font-family: Arial, sans-serif;
-            z-index: 1;
-
-        }
-        .overlay-text3 div {
-            background: black;
-            border-radius: 40px;
-            width: 500px;
-            height: 200px;
-            top: 60%;
-            margin: 10em;
-            position: relative;
-            left: 40%;
-        }
-
     </style>
 </head>
 <body>
-<section>
-    <input type="image" src="assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
-    <div class="overlay-text">
-        <h3>Hello, I’m</h3>
-        <h1>Kushan</h1>
-        <h6>Front-end Development | </h6>
+
+<section class="home-section">
+    <div class="kush">
+    <input type="image" src="/assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
+<!--    <img class="mylogo" src="/assets/images/kushan-high-resolution-logo-transparent.png" >-->
     </div>
 
+    <div class="overlay-text">
+            <h3 >Hello, I’m</h3>
+            <h1>Kushan</h1>
+            <h6>Front-end Development | </h6>
+        </div>
+
+        <div class="socal">
+            <input class="img1" type="image" src="/assets/images/5282542_linkedin_network_social%20network_linkedin%20logo_icon.png" alt="image" title="Kushan" width="25px" height="25px" >
+            <input class="img1" type="image" src="/assets/images/5282541_fb_social%20media_facebook_facebook%20logo_social%20network_icon.png" alt="image" title="Kushan" width="25px" height="25px">
+            <input class="img1" type="image" src="/assets/images/5282549_call_chat_mobile_whatsapp_whatsapp%20logo_icon.png" alt="image" title="Kushan" width="25px" height="25px" >
+            <input class="img1" type="image" src="/assets/images/317712_code%20repository_github_repository_resource_icon.png" alt="image" title="Kushan" width="25px" height="25px" >
+        </div>
+    </div>
 </section>
 <header>
     <nav>
@@ -325,9 +65,8 @@
         </div>
 
         <div class="cercal">
-            <input type="image" src="assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
+            <input type="image" src="/assets/images/WhatsApp%20Image%202024-08-30%20at%2023.22.40_151fa35a.jpg" alt="image" title="Kushan" >
         </div>
-
         <div class="div1">
             <a href="">Skills</a>
             <a href="">Projects</a>
@@ -336,28 +75,150 @@
         </div>
     </nav>
 </header>
-<main>
-    <div class="overlay-text2">
+
+
+<main class="about-main" >
+
+    <div class="overlay-text2" >
         <h1>About</h1>
         <div class="text1" >I’m</div>
         <div class="text2" >Kushan Damitha</div>
-        <h4>I am currently pursuing a Diploma in Software Engineering.
+        <h4 data-aos="fade-up"
+            data-aos-duration="3000">I am currently pursuing a Diploma in Software Engineering.
             With a strong passion for technology and problem-solving,
             I am eager to apply my skills and knowledge to real-world
             projects and contribute to innovative solutions.</h4>
     </div>
-
     <button>Download CV</button>
-
 </main>
+
 <main class="main2">
-    <div class="overlay-text3">
-        <h1>Education</h1>
-        <div></div>
+    <div class="overlay-text3" >
+        <h1 class="animate__flipOutY">Education</h1>
+        <div class="educat" data-aos="zoom-in-right">
+            <h3 class="education">I got my basic education from
+                St.Mary's College,Mathugama and I have successfully passed G.C.E O/L and G.C.E A/L.</h3>
+            <img class="smc" src="/assets/images/img_19.png"  title="SMC" alt="logo" >
+        </div>
+        <div class="ijse"  >
+                        <h3 class="education2">
+                            Good understanding of programming languages
+                            (Java, Python etc), query languages(MY SQL, HQL),
+                            software design tools,
+                            UI/UX design tools (Figma) and web designing.
+                            Learning about modern software technologies
+                            that need to be known more.</h3>
+            <img class="logo" src="/assets/images/img_20.png" title="ijse" alt="logo">
+        </div>
+    </div>
+</main>
+<main class="main3">
+    <div class="overlay-text4">
+        <h1>Assignment</h1>
+        <div class="assignment" >
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+            <div class="second"></div>
+        </div>
     </div>
 </main>
 
+<main class="main4">
+    <div class="overlay-text5">
+      <h1>Skills</h1>
+      <div class="skill">
+          <img class="figma" type="image" src="/assets/images/img.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="figmatext">Figma</h3>
+          <img class="git" type="image" src="/assets/images/img_1.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="gittext">Github</h3>
+          <img class="vscode" type="image" src="/assets/images/img_2.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="vstext">VS code</h3>
+      </div>
+      <div class="skill2">
+          <img class="java" type="image" src="/assets/images/img_3.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="javatext">Java</h3>
+          <img class="mysql" type="image" src="/assets/images/img_4.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="mysqltext">MySQL</h3>
+          <img class="html" type="image" src="/assets/images/img_5.png" alt="image" title="Kushan" width="90px" height="90px" >
+          <h3 class="htmltext">HTML</h3>
+      </div>
+    </div>
+</main>
+
+<main class="main5">
+    <div class="overlay-text6">
+        <h1>Projects</h1>
+        <div class="big">
+        <div class="p1">
+            <div class="small1">
+                <img class="ass" type="image" src="/assets/images/img_22.png" alt="image" title="Kushan" width="90px" height="90px" >
+                <h4 class="mvc">MVC Architecture Software Project</h4>
+            </div>
+            <img class="icon" type="image" src="/assets/images/img_23.png" alt="image" title="Kushan" width="90px" height="90px" >
+        </div>
+
+        <div class="p2">
+            <div class="small2">
+                <img class="pro2" type="image" src="/assets/images/Screenshot%202.png" alt="image" title="Kushan" width="90px" height="90px" >
+                <h4 class="leyer">Layered Architecture Software Project</h4>
+            </div>
+            <img class="icon2" type="image" src="/assets/images/img_23.png" alt="image" title="Kushan" width="90px" height="90px" >
+        </div>
+
+
+        <div class="p3">
+            <img class="icon3" type="image" src="/assets/images/img_23.png" alt="image" title="Kushan" width="90px" height="90px" >
+        </div>
+
+        <div class="p4">
+            <img class="icon4" type="image" src="/assets/images/img_23.png" alt="image" title="Kushan" width="90px" height="90px" >
+        </div>
+        </div>
+    </div>
+</main>
+
+<main class="main6" >
+    <div>
+        <h1>My Services</h1>
+    </div>
+
+    <section id="big" >
+<!--        <div>-->
+            <div >
+
+            </div>
+
+            <div >
+
+            </div>
+
+            <div>
+
+            </div>
+<!--        </div>-->
+    </section>
+</main>
+
+<!--<main class="main7">-->
+<!--    <div class="overlay-text8">-->
+<!--        <h1>Gallery</h1>-->
+<!--        <div class="big-img">-->
+<!--        <img class="img" type="image" src="/assets/images/img_10.png" alt="image" title="Kushan" width="90px" height="90px" >-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+
+
 <footer>copyright © 2024 developed by Kushan | All rights reserved</footer>
+<script src="/https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
 
